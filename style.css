@@ -1,0 +1,824 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+
+
+/* =========================
+   RESET
+   ========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #0a0908;
+    color: #ddd2c6;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   COVER
+   ========================= */
+
+.cover {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    position: relative;
+
+    padding: 50px 25px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #2a211b 0%,
+            #15110e 38%,
+            #090807 78%
+        );
+}
+
+.cover::before {
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    border-radius: 50%;
+
+    background: rgba(150, 105, 70, 0.06);
+
+    filter: blur(100px);
+}
+
+.cover-content {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: 1000px;
+}
+
+
+/* small top text */
+
+.small-text {
+    margin-bottom: 35px;
+
+    color: #968678;
+
+    font-size: 11px;
+
+    letter-spacing: 5px;
+
+    text-transform: uppercase;
+}
+
+
+/* MAIN TITLE */
+
+.cover h1 {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: clamp(70px, 10vw, 145px);
+
+    line-height: .82;
+
+    font-weight: 500;
+
+    letter-spacing: -4px;
+
+    color: #eee4d6;
+}
+
+
+/* line */
+
+.line {
+    width: 75px;
+
+    height: 1px;
+
+    margin: 38px auto;
+
+    background: #9c7655;
+}
+
+
+/* cover quote */
+
+.cover .quote {
+    max-width: 600px;
+
+    margin: 0 auto;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 21px;
+
+    line-height: 1.6;
+
+    color: #bdb1a5;
+
+    font-style: italic;
+}
+
+
+/* author */
+
+.author {
+    margin-top: 20px;
+
+    color: #796c60;
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+}
+
+
+/* button */
+
+.start-btn {
+    display: inline-block;
+
+    margin-top: 45px;
+
+    padding: 13px 28px;
+
+    border: 1px solid rgba(180, 140, 100, 0.5);
+
+    color: #c9b7a4;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    transition: 0.3s ease;
+}
+
+.start-btn:hover {
+    background: #a77c57;
+
+    color: #0a0908;
+
+    border-color: #a77c57;
+}
+
+
+/* =========================
+   CONTENTS
+   ========================= */
+
+.contents {
+    min-height: 100vh;
+
+    padding: 130px 12%;
+
+    background:
+        linear-gradient(
+            180deg,
+            #0a0908 0%,
+            #12100e 50%,
+            #090807 100%
+        );
+}
+
+
+/* CONTENTS LABEL */
+
+.section-label {
+    margin-bottom: 18px;
+
+    color: #9a795d;
+
+    font-size: 11px;
+
+    letter-spacing: 5px;
+
+    text-transform: uppercase;
+}
+
+
+/* CHAPTERS */
+
+.contents h2 {
+    margin-bottom: 65px;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: clamp(55px, 7vw, 90px);
+
+    font-weight: 500;
+
+    line-height: 0.9;
+
+    color: #e5d7c8;
+}
+
+
+/* IMPORTANT:
+   .chapter-list contains A directly
+*/
+
+.chapter-list {
+    width: 100%;
+
+    max-width: 900px;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+/* EACH CHAPTER */
+
+.chapter-list a {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 35px;
+
+    padding: 25px 5px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+    color: #bdb1a5;
+
+    text-decoration: none;
+
+    transition:
+        padding-left 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+/* last line */
+
+.chapter-list a:last-child {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+/* NUMBER */
+
+.chapter-list a span:first-child {
+    width: 45px;
+
+    flex-shrink: 0;
+
+    color: #806348;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+}
+
+
+/* CHAPTER NAME */
+
+.chapter-list a span:last-child {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: clamp(28px, 3vw, 38px);
+
+    line-height: 1;
+
+    color: #c9bdb1;
+}
+
+
+/* hover */
+
+.chapter-list a:hover {
+    padding-left: 20px;
+
+    color: #e3d2c0;
+
+    border-color: rgba(170, 125, 85, 0.35);
+}
+
+.chapter-list a:hover span:last-child {
+    color: #e7d7c7;
+}
+
+
+/* =========================
+   INTRO
+   ========================= */
+
+.intro {
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: flex-start;
+
+    padding: 130px 12%;
+
+    background:
+        radial-gradient(
+            circle at 75% 25%,
+            rgba(135, 95, 60, 0.10),
+            transparent 32%
+        ),
+        #0b0908;
+}
+
+
+/* FIRST TWO PARAGRAPHS */
+
+.intro > p {
+    width: 100%;
+
+    max-width: 850px;
+
+    margin-bottom: 38px;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: clamp(32px, 4vw, 54px);
+
+    line-height: 1.35;
+
+    letter-spacing: -0.5px;
+
+    color: #d9cec2;
+}
+
+
+/* SECOND PARAGRAPH */
+
+.intro > p:nth-child(2) {
+    max-width: 760px;
+
+    margin-left: 70px;
+
+    color: #bdb1a5;
+}
+
+
+/* FINAL QUESTION */
+
+.intro .intro-question {
+    max-width: 720px;
+
+    margin-top: 55px;
+
+    margin-left: auto;
+
+    margin-right: 5%;
+
+    margin-bottom: 0;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: clamp(40px, 5vw, 68px);
+
+    line-height: 1.12;
+
+    color: #e2d2c1;
+}
+
+
+/* three dots */
+
+.intro .intro-question::first-line {
+    color: #c7b8a9;
+}
+
+
+/* TO PHIR KYA */
+
+.intro .intro-question strong {
+    display: block;
+
+    margin-top: 15px;
+
+    font-weight: 600;
+
+    color: #ead7c3;
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 700px) {
+
+    .cover {
+        padding: 40px 20px;
+    }
+
+    .cover h1 {
+        font-size: clamp(65px, 18vw, 100px);
+
+        letter-spacing: -3px;
+    }
+
+    .cover .quote {
+        font-size: 18px;
+    }
+
+
+    .contents {
+        padding: 90px 25px;
+    }
+
+    .contents h2 {
+        margin-bottom: 45px;
+    }
+
+    .chapter-list a {
+        gap: 18px;
+
+        padding: 22px 0;
+    }
+
+    .chapter-list a span:last-child {
+        font-size: 29px;
+    }
+
+
+    .intro {
+        padding: 90px 25px;
+    }
+
+    .intro > p {
+        font-size: 31px;
+
+        line-height: 1.45;
+
+        margin-bottom: 35px;
+    }
+
+    .intro > p:nth-child(2) {
+        margin-left: 0;
+    }
+
+    .intro .intro-question {
+        margin-left: 0;
+
+        margin-right: 0;
+
+        margin-top: 35px;
+
+        font-size: 42px;
+    }
+}
+/* =========================================
+   CHAPTER PAGES ONLY
+   ========================================= */
+
+.reading-page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 100px 60px 80px;
+    background: #0a0908;
+    color: #d7cdc2;
+}
+
+.chapter-heading {
+    padding: 40px 0 70px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.chapter-heading p {
+    margin-bottom: 18px;
+    color: #98765a;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    letter-spacing: 5px;
+}
+
+.chapter-heading h1 {
+    margin: 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(65px, 9vw, 105px);
+    font-weight: 500;
+    line-height: 0.9;
+    color: #e5d7c8;
+}
+
+.chapter-line {
+    width: 60px;
+    height: 1px;
+    margin-top: 30px;
+    background: #987050;
+}
+
+.chapter-text {
+    max-width: 760px;
+    padding-top: 70px;
+}
+
+.chapter-text > p {
+    margin: 0 0 28px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    line-height: 1.75;
+    color: #c8bdb2;
+}
+
+.chapter-text > p:first-child {
+    font-size: 30px;
+    color: #ded2c5;
+}
+
+.chapter-text h2 {
+    margin: 100px 0 40px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(40px, 5vw, 60px);
+    font-weight: 500;
+    line-height: 1;
+    color: #e2d4c5;
+}
+
+.chapter-text h2::before {
+    content: "";
+    display: block;
+    width: 35px;
+    height: 1px;
+    margin-bottom: 20px;
+    background: #987050;
+}
+
+.chapter-text .highlight {
+    margin: 50px 0;
+    padding: 24px 30px;
+    border-left: 2px solid #9b704d;
+    background: rgba(145, 100, 65, 0.08);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 29px;
+    line-height: 1.45;
+    color: #e1d1c0;
+}
+
+.chapter-text .quote-box {
+    margin: 60px 0;
+    padding: 35px 30px;
+    border-top: 1px solid rgba(160, 120, 80, 0.25);
+    border-bottom: 1px solid rgba(160, 120, 80, 0.25);
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px;
+    line-height: 1.45;
+    font-style: italic;
+    color: #dccbbb;
+}
+
+.chapter-text .big-line {
+    margin: 80px 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(36px, 5vw, 55px);
+    line-height: 1.2;
+    color: #e2d2c2;
+}
+
+.chapter-text .ending {
+    margin-top: 120px;
+    padding-top: 80px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.chapter-text .ending p {
+    max-width: 760px;
+}
+
+.chapter-text .final-word {
+    margin: 90px 0 60px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(70px, 10vw, 120px);
+    line-height: 0.85;
+    color: #ead9c7;
+}
+
+.chapter-text .final-question {
+    margin-top: 80px;
+    font-size: 32px;
+    line-height: 1.5;
+    font-style: italic;
+    color: #d8c8b8;
+}
+
+.chapter-text .final-line {
+    margin-top: 60px;
+    font-size: 17px;
+    color: #8e8073;
+}
+
+.chapter-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 70px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.chapter-navigation a {
+    color: #9d8d7d;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.chapter-navigation a:hover {
+    color: #d5b795;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .reading-page {
+        padding: 50px 25px 60px;
+    }
+
+    .chapter-heading {
+        padding: 30px 0 55px;
+    }
+
+    .chapter-heading h1 {
+        font-size: 65px;
+    }
+
+    .chapter-text {
+        padding-top: 55px;
+    }
+
+    .chapter-text > p {
+        font-size: 21px;
+        line-height: 1.7;
+    }
+
+    .chapter-text > p:first-child {
+        font-size: 26px;
+    }
+
+    .chapter-text h2 {
+        margin-top: 80px;
+        font-size: 42px;
+    }
+
+    .chapter-text .highlight {
+        padding: 22px;
+        font-size: 26px;
+    }
+
+    .chapter-text .quote-box {
+        font-size: 26px;
+        padding: 28px 20px;
+    }
+
+    .chapter-text .big-line {
+        font-size: 38px;
+    }
+
+    .chapter-text .final-word {
+        font-size: 75px;
+    }
+
+    .chapter-navigation {
+        flex-direction: column;
+        gap: 25px;
+        align-items: center;
+    }
+}
+/* =========================================
+   CHAPTER END — SAME READING STYLE
+   ========================================= */
+
+.chapter-text .ending p {
+    margin: 0 0 28px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    line-height: 1.75;
+    color: #c8bdb2;
+}
+
+.chapter-text .ending .big-line {
+    margin: 70px 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(36px, 5vw, 55px);
+    line-height: 1.25;
+    color: #e2d2c2;
+}
+
+.chapter-text .ending .final-question {
+    margin-top: 70px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    line-height: 1.5;
+    font-style: italic;
+    color: #d8c8b8;
+}
+
+.chapter-text .ending .final-line {
+    margin-top: 50px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    line-height: 1.7;
+    color: #9e9185;
+}
+/* =========================================
+   FRONT PAGE — INTRO SECTION
+   ========================================= */
+
+.intro {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 150px 40px 180px;
+    text-align: center;
+}
+
+.intro > p {
+    margin: 0 auto 30px;
+    max-width: 720px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 27px;
+    line-height: 1.65;
+    font-weight: 400;
+    color: #c9beb3;
+}
+
+.intro .intro-question {
+    margin-top: 70px;
+    font-size: 31px;
+    line-height: 1.5;
+    font-style: italic;
+    color: #d9ccbe;
+}
+
+.intro .intro-question strong {
+    display: inline-block;
+    margin-top: 12px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(40px, 5vw, 62px);
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: -1px;
+    color: #e5d5c5;
+}
+@media (max-width: 700px) {
+
+    .intro {
+        padding: 100px 25px 120px;
+    }
+
+    .intro > p {
+        font-size: 22px;
+        line-height: 1.7;
+    }
+
+    .intro .intro-question {
+        margin-top: 55px;
+        font-size: 25px;
+    }
+
+    .intro .intro-question strong {
+        font-size: 43px;
+    }
+
+    .chapter-text .ending p {
+        font-size: 21px;
+        line-height: 1.7;
+    }
+
+    .chapter-text .ending .final-question {
+        font-size: 27px;
+    }
+}
